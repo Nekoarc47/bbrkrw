@@ -1,5 +1,5 @@
 # bbrkrw
-лабораторная по базам данных
+Первая лабораторная по базам данных
 таблица orders
 1) Выберите из таблицы orders все заказы
 Решение:
@@ -24,3 +24,34 @@ WHERE STATUS IN ('cancelled', 'new');
 SELECT id, sum FROM orders
 WHERE products_count > 3;
 ![4](https://github.com/user-attachments/assets/3ffc277b-78d6-4870-86f3-41a4eb6c4f55)
+
+Шпаргалки:
+INSERT INTO table (column1, column2)
+VALUES (value1, value2);
+Добавление одной записи
+
+INSERT INTO table (column1, column2)
+VALUES (value11, value12),
+(value21, value22), ...;
+Добавление нескольких записей
+
+INSERT INTO table1 (column1, column2)
+SELECT (col1, col2) FROM table2;
+Добавление записей из другой таблицы
+
+UPDATE table1
+SET column1 = new_value;
+Обновление поля во всех записях
+
+UPDATE table1
+SET column1 = new_value,
+    column2 = new_value
+WHERE condition;
+Обновление поля во записях, соответствующих условию
+
+DELETE FROM table;
+Удаление всех записей
+
+DELETE FROM table
+WHERE condition;
+Удаление записей, соответствующих условию
